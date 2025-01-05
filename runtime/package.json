@@ -1,0 +1,25 @@
+{
+	"name": "anotherjs-ui",
+	"version": "1.0.0",
+	"description": "A blazing-fast, lightweight, and developer-friendly JavaScript frontend framework designed to simplify modern web application development.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/egsir1/anotherjs.git"
+	},
+	"keywords": [
+		"frontend",
+		"framework",
+		"SPA",
+		"web"
+	],
+	"author": "Sirojiddin Egamberdiev (Sam)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/egsir1/anotherjs/issues"
+	},
+	"homepage": "https://github.com/egsir1/anotherjs#readme"
+}
