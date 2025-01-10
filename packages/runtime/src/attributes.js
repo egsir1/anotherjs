@@ -1,3 +1,8 @@
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+// https://www.w3.org/TR/SVGTiny12/attributeTable.html#PropertyTable
+// https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes
+// https://developer.mozilla.org/en-US/docs/Glossary/IDL
+
 /**
  * Sets the attributes of an element.
  *
@@ -7,7 +12,6 @@
  * @param {HTMLElement} el target element
  * @param {object} attrs attributes to set
  */
-
 export function setAttributes(el, attrs) {
 	const { class: className, style, ...otherAttrs } = attrs;
 
@@ -25,10 +29,17 @@ export function setAttributes(el, attrs) {
 	}
 
 	for (const [name, value] of Object.entries(otherAttrs)) {
-		setAttributes(el, name, value);
+		setAttribute(el, name, value);
 	}
 }
 
+/**
+ * Sets the attribute on the element.
+ *
+ * @param {Element} el The element to add the attribute to
+ * @param {string} name The name of the attribute
+ * @param {(string|number|null)} value The value of the attribute
+ */
 export function setAttribute(el, name, value) {
 	if (value == null) {
 		removeAttribute(el, name);
@@ -39,10 +50,18 @@ export function setAttribute(el, name, value) {
 	}
 }
 
+/**
+ * Removes the attribute from the element.
+ *
+ * @param {Element} el the element where the attribute is set
+ * @param {string} name name of the attribute
+ */
 export function removeAttribute(el, name) {
 	try {
 		el[name] = null;
 	} catch {
+		// Setting 'size' to null on an <input> throws an error.
+		// Removing the attribute instead works. (Done below.)
 		console.warn(`Failed to set "${name}" to null on ${el.tagName}`);
 	}
 

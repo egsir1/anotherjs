@@ -1,10 +1,14 @@
 {
-	"name": "anotherjs-ui",
+	"name": "anotherjs-ui-project",
 	"version": "1.0.0",
 	"description": "A blazing-fast, lightweight, and developer-friendly JavaScript frontend framework designed to simplify modern web application development.",
 	"main": "index.js",
+	"private": true,
+	"workspaces": [
+		"packages/runtime"
+	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"serve:examples": "npx http-server . -o ./examples/"
 	},
 	"repository": {
 		"type": "git",
@@ -21,5 +25,8 @@
 	"bugs": {
 		"url": "https://github.com/egsir1/anotherjs/issues"
 	},
-	"homepage": "https://github.com/egsir1/anotherjs#readme"
+	"homepage": "https://github.com/egsir1/anotherjs#readme",
+	"dependencies": {
+		"anotherjs-ui": "^1.0.3"
+	}
 }
