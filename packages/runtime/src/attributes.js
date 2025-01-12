@@ -1,8 +1,3 @@
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
-// https://www.w3.org/TR/SVGTiny12/attributeTable.html#PropertyTable
-// https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes
-// https://developer.mozilla.org/en-US/docs/Glossary/IDL
-
 /**
  * Sets the attributes of an element.
  *
